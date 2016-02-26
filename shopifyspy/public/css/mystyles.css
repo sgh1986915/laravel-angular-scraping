@@ -1,0 +1,61 @@
+body {
+	padding-top: 60px;
+}
+
+table {
+	font-size: 14px;
+}
+
+table td {
+    line-height: 26px !important;
+}
+a {
+	cursor: pointer;
+}
+
+.nav-tabs {
+	border-bottom: none;
+}
+
+.masonry-brick {
+    margin: 10px;
+    display: none;
+}
+
+.masonry-brick.loaded {
+    display: block;
+}
+
+.pagination ul li {
+	display: inline;
+}
+
+.pagination-small ul li>a {
+	padding: 6px 12px;
+	font-size: 11.9px;
+	line-height: 20px;
+	text-decoration: none;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+}
+
+.pagination ul .active>a {
+	color: #999999;
+	cursor: default;
+}
+.pagination ul .disabled>a, .pagination ul .disabled>a:hover, .pagination ul .disabled>a:focus {
+	color: #999999;
+	background-color: transparent;
+	cursor: default;
+}
+/*
+.media-imgs:hover {
+	width: 200% !important;
+	object-fit: fill !important;
+	margin-left: -50%;
+	position: relative;
+	z-index: 999;
+	height: 200% !important;
+	max-height: 200% !important;
+}
+*/

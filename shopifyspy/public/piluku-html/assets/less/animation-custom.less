@@ -1,0 +1,55 @@
+@import 'variables.less';
+
+/****************************************************
+            Animation Demo purpose only
+****************************************************/
+
+#animateTest 
+{
+    position: fixed;
+    z-index: 1000;
+}
+.animate-demo-buttons
+{
+    margin-top: 100px;
+}
+.demo-input-group
+{
+    margin-top: 10px;
+}
+.btn-animate-demo
+{
+    margin-top: 10px;
+}
+.animate-list
+{
+    a 
+    {
+        border: 1px solid @light-border;
+        color: @content-color;
+        font-family: @main-font;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.25px;
+        line-height: 24px;
+        &:hover, &:active, &:focus
+        {
+            background-color: @input-bg;
+        }
+        &.active
+        {
+            background-color: @input-bg !important;
+            border: 1px solid transparent !important;
+            color: @heading-color;
+            &:hover, &:active, &:focus
+            {
+                background-color: @input-bg;
+                color: @heading-color;
+            }
+        }
+        &:first-child, &:last-child 
+        {
+            border-radius: 0px;
+        }
+    }
+}

@@ -1,0 +1,299 @@
+@import 'variables.less';
+
+
+/****************************************************
+                        button colors
+****************************************************/
+.btn
+{
+    border-radius: 0;
+    color: #ffffff;
+    font-family: @main-font;
+    font-size: 14px;
+    font-weight: 300;
+    outline: 0;
+    border: 1px solid transparent;
+    &:focus, &:active
+    {
+        outline: 0 !important;
+        border: 1px solid transparent;
+    }
+    &:hover
+    {
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+}
+.btn-radius
+{
+    border-radius: 4px;
+}
+.btn-round
+{
+    border-radius: 30px;
+}
+.btn-primary
+{
+    background-color: @primary-color;
+    border: 1px solid transparent;
+    &:hover, &:active, &:focus
+    {
+        background-color: darken(@primary-color,5%);
+        border: 1px solid transparent;
+        color: #ffffff;
+    }
+}
+.btn-green
+{
+    background-color: @flatGreen;
+    border: 1px solid transparent;
+    &:hover, &:active, &:focus
+    {
+        background-color: darken(@flatGreen,10%);
+        border: 1px solid transparent;
+        color: #ffffff;
+    }
+}
+.btn-orange
+{
+    background-color: @flatOrange;
+    border: 1px solid transparent;
+    &:hover, &:active, &:focus
+    {
+        background-color: darken(@flatOrange,5%);
+        border: 1px solid transparent;
+        color: #ffffff;
+    }
+}
+.btn-red
+{
+    background-color: @flatRed;
+    border: 1px solid transparent;
+    &:hover, &:active, &:focus
+    {
+        background-color: darken(@flatRed,5%);
+        border: 1px solid transparent;
+        color: #ffffff;
+    }
+}
+.btn-black
+{
+    background-color: #000000;
+    border: 1px solid transparent;
+    &:hover, &:active, &:focus
+    {
+        background-color: lighten(#000000,20%);
+        border: 1px solid transparent;
+        color: #ffffff;
+    }
+}
+.btn-white
+{
+    background-color: #ffffff;
+    border: 1px solid @light-border;
+    color: @heading-color;
+    &:hover, &:active, &:focus
+    {
+        background-color: darken(#ffffff,5%);
+        border: 1px solid @light-border;
+        color: @heading-color;
+    }
+}
+.btn-gray
+{
+    background-color: @light-color;
+    border: 1px solid transparent;
+    &:hover, &:active, &:focus
+    {
+        background-color: darken(@light-color,20%);
+        border: 1px solid transparent;
+        color: #ffffff;
+    }
+}
+.btn-default
+{
+    background-color: #ffffff;
+    border: 1px solid @dark-border;
+    color: #000000;
+    &:hover, &:active, &:focus
+    {
+        background-color: darken(#ffffff,20%);
+        border: 1px solid @dark-border;
+        color: #000000;
+    }
+}
+/****************************************************
+                        paneltype-heading
+****************************************************/
+.paneltype-heading
+{
+    color: @heading-color;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    text-transform: capitalize;
+    line-height: 26px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    &:first-child
+    {
+        padding-top: 0px;
+    }
+}
+/****************************************************
+                        Button Icons
+****************************************************/
+.btn-icon-block
+{
+    padding: 0px;
+    i
+    {
+        padding: 9px;
+    }
+    &.btn-icon-blockleft
+    {
+        padding: 0px 12px 0px 0px;
+        span
+        {
+            padding-left: 6px;
+        }
+    }
+    &.btn-icon-blockright
+    {
+        padding: 0px 0px 0px 12px;
+        span
+        {
+            padding-right: 6px;
+        }
+    }
+    &.btn-icon-primary
+    {
+        i
+        {
+            background-color: darken(@primary-color,5%);
+        }
+    }
+    &.btn-icon-green
+    {
+        i
+        {
+            background-color: darken(@flatGreen,10%);
+        }
+    }
+    &.btn-icon-orange
+    {
+        i
+        {
+            background-color: darken(@flatOrange,5%);
+        }
+    }
+    &.btn-icon-red
+    {
+        i
+        {
+            background-color: darken(@flatRed,5%);
+        }
+    }
+    &.btn-icon-black
+    {
+        i
+        {
+            background-color: lighten(#000000,20%);
+        }
+    }
+    &.btn-icon-white
+    {
+        i
+        {
+            background-color: darken(#ffffff,5%);
+        }
+    }
+    &.btn-icon-gray
+    {
+        i
+        {
+            background-color: darken(@light-color,20%);
+        }
+    }
+    &.btn-icon-default
+    {
+        i
+        {
+            background-color: darken(#ffffff,20%);
+        }
+    }
+}
+/****************************************************
+                        Button Dropdown
+****************************************************/
+.dropdown-button-menu
+{
+    border-width: 0;
+    border-radius: 0;
+    background-color: #FFFFFF;				
+    border-top: 2px solid @primary-color;
+    -webkit-transition: all 1s ease-out;
+    max-height: 420px;
+    overflow: auto;
+    z-index: 99;
+    padding-bottom: 0;
+    &.btn-drop
+    {
+        >li
+        {
+            a
+            {
+                color: @heading-color;
+                font-family: @main-font;
+                font-size: 13px;
+                font-weight: 300;
+                line-height: 26px;
+                letter-spacing: 0.25px;
+                text-decoration: none;
+                text-transform: capitalize;
+                &:hover
+                {
+                    background-color: @light-border;
+                }
+            }
+            
+        }
+    }
+    &.btn-bgcolor
+    {
+        background-color: @primary-color;
+        border-top: 2px solid darken(@primary-color,5%);
+        >li
+        {
+            a
+            {
+                color: #ffffff;
+                &:hover
+                {
+                    background-color: darken(@primary-color,5%);
+                }
+            }
+        }
+    }
+    &.btn-bdrred
+    {
+        border-top: 2px solid @flatRed !important;
+    }
+    &.btn-bgred
+    {
+        background-color: @flatRed;
+        >li
+        {
+            a
+            {
+                color: #ffffff;
+                &:hover
+                {
+                    background-color: darken(@flatRed,5%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@import 'variables.less';
+
+html,body
+{
+	overflow-x: visible !important;
+	overflow-y: visible !important;
+	background: @light-border;
+}
+
+.flip-container {	
+	width: 520px;
+	margin: 0 auto;	
+	margin-top: 150px;
+	min-height: 400px;	
+	position: relative;		
+	.front
+	{
+		width: 520px;
+		padding: 30px;
+		height: 100%;
+		background-color: #FFFFFF;
+		clear: both;
+		display: table;	
+		border-radius: 3px;
+		border: 1px solid @dark-border;		
+
+	}	
+	.front, .back {
+		backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.holder
+	{    	 
+
+		input 
+		{
+			background: transparent;
+			margin-top: 20px;
+			height: 50px;
+			border-radius: 3px;
+
+		} 
+
+	}
+	.bottom_info
+	{
+		margin-top: 30px;          
+		position: relative;
+		a 
+		{
+			text-decoration: none;
+			color: @heading-color;
+			outline: none;
+			&:hover
+			{
+				color: @primary-color;
+			}
+		}
+	}
+	.btn
+	{
+		height: 40px;
+		font-size: 16px;
+		margin-top: 20px;
+		text-transform: uppercase;
+		line-height: 40px;
+		padding: 0;
+	}
+	
+	.heading 
+	{
+		text-align: center;
+		color: @primary-color;
+	}
+}
+
+
+.modal
+{
+  .modal-title
+  {
+    color: @heading-color;
+    font-size: 16px;
+  }
+  h6.note
+  {
+    margin-top: 30px;
+    color: @heading-color;
+    color: @flatRed;
+  }
+  .modal-footer
+  {
+    border-top-width: 0 !important;          
+  }
+  .btn
+  {
+    margin-top: 0;
+    border-radius: 3px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+
+
+@media (max-width : 530px) 
+{
+	.flip-container 
+	{
+		margin-top: 5px;
+		width: 350px ;
+		.front 
+		{
+			width: 350px ;
+		}
+	}
+}

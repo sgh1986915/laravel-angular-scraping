@@ -1,0 +1,112 @@
+@import 'variables.less';
+
+
+/****************************************************
+                        Pricing Header
+****************************************************/
+.pricing-header
+{
+    background-color: #3b414a;
+    color: #ffffff;
+    font-family: @main-font;
+    font-weight: 400;
+    font-size: 23px;
+    letter-spacing: 0.50px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 26px;
+    position: relative;
+    .pricing-recommended
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        i
+        {
+            background-color: @flatGreen;
+            padding: 10px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+    }
+    &.pricing-header-two
+    {
+        background-color: #515760;
+        border: 1px solid #60656e;
+        width: 100%;
+        .pricing-price-two
+        {
+            font-family: @main-font;
+            font-weight: 400;
+            font-size: 20px;
+            letter-spacing: 0.50px;
+            text-transform: uppercase;
+            text-align: center;
+            padding-top: 10px;
+            span
+            {
+                font-size: 12px;
+            }
+        }
+    }
+}
+/****************************************************
+                        Pricing Price
+****************************************************/
+.pricing-price
+{
+    background-color: @flatBlue;
+    color: #ffffff;
+    font-family: @main-font;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.50px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    span
+    {
+        font-size: 12px;
+    }
+}
+/****************************************************
+                        Pricing Features
+****************************************************/
+.pricing-features
+{
+    background-color: #ffffff;
+    border: 1px solid @light-border;
+    padding: 26px;
+    li
+    {
+        color: @content-color;
+        font-family: @main-font;
+        font-weight: 300;
+        font-size: 13px;
+        letter-spacing: 0.20px;
+        line-height: 26px;
+        text-transform: capitalize;
+        text-align: center;
+        span
+        {
+            color: @heading-color;
+            font-weight: 400;
+        }
+        &:last-child
+        {
+            padding-top: 26px;
+        }
+    }
+    &.features-two
+    {
+        width: 100%;
+    }
+}
+.pricing
+{
+    >.col-md-2
+    {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

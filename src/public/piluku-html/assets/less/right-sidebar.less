@@ -1,0 +1,290 @@
+@import 'variables.less';
+li.chat_btn
+{
+	height: 101%;  
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	background: red;
+	.right-bar-toggle
+	{
+		background: @primary-color  !important;
+		padding: 0px 35px !important;				
+		i 
+		{
+			font-size: 35px;		
+			display: inline-block;
+			line-height: 0;			
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			top: 15px;	
+			color: #FFFFFF;			
+		}
+	}	
+}
+
+.right-bar
+{
+	position: absolute !important;		
+	z-index: 999999999 !important;
+	background: @right-bar-bg;
+	.tabs
+	{
+		width: 100% !important;
+		padding: 0;
+	}
+	.no_padding
+	{
+		padding: 0;
+	}
+	.panel-heading
+	{
+		background-color: @input-bg !important; 
+		.chevron
+		{
+			font-size: 12px;
+			float: right;
+		}		
+	}
+	.panel.panel-default
+	{
+		border-top-width: 0 !important;
+	}
+
+}
+	
+.contacts
+{	
+	.col
+	{
+		padding: 0px !important;
+	}
+	.tabs 
+	{
+		border-bottom: 1px solid transparent;
+		background-color: @primary-color !important;
+		background-color: rgb(33, 150, 243);
+		box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.12) !important;		
+		.tab
+		{
+			background-color: @primary-color;
+			a
+			{
+				color: #FFFFFF;				
+				font-family: 'Nunito', sans-serif;
+				font-size: 13px;
+				font-weight: 400;
+				letter-spacing: 0.25px;
+				text-decoration: none;
+				text-transform: capitalize;
+				color: lighten(@primary-color,20%);
+				&.active
+				{
+					color:#FFFFFF !important;
+					border-color: #FFFFFF !important;
+				}
+				&:hover
+				{
+					color: #FFFFFF;
+				}
+			}
+		}
+
+		.indicator
+		{
+			background-color: #FFFFFF;
+		}
+
+	}
+	.contacts-list
+	{		
+		.list-group-item
+		{
+			border-width: 0;
+			display: table;
+			width: 100%; 
+			background-color: transparent;
+			a 
+			{
+				text-decoration: none;
+				&:hover
+				{
+					span.name
+					{
+						color: @primary-color;	
+					}
+					
+				}								
+			}	
+			span.name
+			{
+				white-space: nowrap; 
+				width: 130px; 
+				overflow: hidden;
+				text-overflow: ellipsis; 			    
+				display: inline-block;
+				float: left;
+				padding-top: 2px;
+				padding-left: 5px;
+				color: @heading-color;				
+			}
+		}
+		.list-group-item:first-child
+		{
+			border-radius: 0;
+		}
+		
+		.avatar 
+		{
+			width: 30px;
+			display: inline-block;
+			margin-right: 2px;
+			float: left;
+			margin-top: 3px;
+			img 
+			{
+				border-radius: 50%;
+				width: 100%;
+				border: 1px solid @dark-border;
+			}
+		}
+		i
+		{
+			float: right;
+			line-height: 35px;
+			color: #ddd;
+			font-size: 10px;
+			&.away
+			{
+				color: @warning;
+			}
+			&.online
+			{
+				color: @success;
+			}
+			&.busy
+			{
+				color: @danger;
+			}
+		}
+
+		
+	}
+	.heading
+	{
+		text-align: center;
+		display: table;
+		width: 100%;
+		margin-bottom: 0px;
+		font-size: 16px;
+		border: 1px solid @light-border;
+		border-left-width: 0;
+		border-right-width: 0;
+		height: 30px;
+		line-height: 40px;
+		background: lighten(@light-border,4%);
+		font-weight: 400;
+		color: @heading-color;
+		&.no_border_bottom
+		{
+			border-bottom-width: 0;
+		}
+		.right,.left
+		{
+			float: left;
+			display: block;		
+			border-right:1px solid @light-border;	
+			a 
+			{
+				display: inline-block;				
+				height: 100%;
+				line-height: 40px;
+				width: 40px;
+				text-decoration: none;
+				color: @heading-color;
+				&:hover
+				{
+					color: @primary-color;
+				}
+			}
+		}
+
+		.left 
+		{
+			float: right;	
+			border-left:1px solid @light-border;				
+		}
+	}
+	.toggle-switch,.check-radio
+	{
+		margin-bottom: 20px;
+		.control-label
+		{
+			margin-top: 10px;
+		}
+	}
+	.list-group-item
+	{
+		padding:5px 15px;
+	}
+
+}
+
+
+
+.message-list
+{			
+	.list-group-item
+	{
+		border-color: @light-border;
+		border-left-width: 0;
+		border-right-width: 0;
+		display: table;
+		width: 100%;		
+		&:hover
+		{
+			background-color: lighten(@light-border,5%);
+		}
+		a 
+		{
+			text-decoration: none;
+		}	
+		span
+		{
+			white-space: nowrap; 
+			width: 130px; 
+			overflow: hidden;
+			text-overflow: ellipsis; 			    
+			display: inline-block;
+			float: left;
+			padding-top: 10px;
+			padding-left: 5px;
+
+		}
+		h4 
+		{
+			color: @heading-color;
+			margin: 0;
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+		p 
+		{
+			color: @content-color;
+			white-space: wrap; 
+			height: 36px; 
+			overflow: hidden;
+			text-overflow: ellipsis; 			    
+			display: inline-block;
+			float: left;
+			padding: 0;
+		}
+	}
+	.list-group-item:first-child
+	{
+		border-radius: 0;
+	}
+}

@@ -1,0 +1,1 @@
+/home/vagrant/trends.dev/app/views/favorites/create.blade.php

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<title>Piluku | signin2</title>
+	<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+	<!-- Bootstrap CSS -->
+
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/material.css">	
+	<link rel="stylesheet" href="assets/css/material.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+	<link rel="stylesheet" type="text/css" href="assets/css/lock-screen2.css">	
+	
+	<!-- custom scrollbar stylesheet -->	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+</head>
+<body>
+
+	<div class="flip-container">
+		<div class="flipper">
+			<div class="front">
+				<!-- front content -->
+				<div class="holder">
+					<h1 class="heading">piluku</h1>				
+					<input class="form-control" id="disabledInput" type="text" placeholder="admin@bootstrapguru.com" disabled>					
+					<input type="password" class="form-control" placeholder="Password">					
+					<div class="bottom_info">
+						<a href="#" class="pull-right" data-toggle="modal" data-target="#forgot">forgot password?</a>
+						<a href="signup.html" class="pull-left">Register new account</a>
+					</div>		
+					<div class="clearfix"></div>
+					<a href="" class="btn btn-primary btn-block sign">Sign in</a>					
+				</div>
+			</div>
+			<div class="back">
+				<!-- front content -->				
+				<div class="holder">
+					<div class="avatar_holder">
+						<img src="assets/images/avatar/five.png" alt="">
+					</div>						
+					<div class="log_msg">logging in as admin...</div>					
+				</div>
+			</div>
+		</div>
+		<div class="load_pulse"></div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel"><i class="ion-android-settings"></i> Reset password</h4>
+				</div>
+				<div class="modal-body">
+					<div class="col-sm-12">
+						<input type="text" class="form-control" placeholder="Enter Email here">
+						<h6 class="note"><i class="ion-android-mail"></i> password will be sent to your email</h6>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-red" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>	
+	<script src="assets/js/lockscreen.js"></script>	
+
+
+</body>
+</html>

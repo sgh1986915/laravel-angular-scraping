@@ -1,0 +1,115 @@
+@import 'variables.less';
+
+body,html
+{
+    background-color: #f9fafb;
+}
+.error
+{
+    margin-top: 300px;
+/****************************************************
+                        404 Error
+*****************************************************/
+    .error-message
+    {
+        color: #a3a7aa;
+        font-family: @main-font;
+        font-size: 36px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        line-height: 44px;
+        text-align: center;
+        padding-top: 60px;
+    }
+    .error-bottom
+    {
+        padding-top: 40px;
+        text-align: center;
+        .btn
+        {
+            border-radius: 0;
+            color: #ffffff;
+            font-family: @main-font;
+            font-size: 14px;
+            font-weight: 300;
+            outline: 0;
+            border: 1px solid transparent;
+            &:focus, &:active
+            {
+                outline: 0 !important;
+                border: 1px solid transparent;
+            }
+            &:hover
+            {
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        .btn-primary
+        {
+            background-color: @primary-color;
+            border: 1px solid transparent;
+            &:hover, &:active, &:focus
+            {
+                background-color: darken(@primary-color,5%);
+                border: 1px solid transparent;
+                color: #ffffff;
+            }
+        }
+        .report-error
+        {
+            color: #a3a7aa;
+            font-family: @main-font;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.25px;
+            line-height: 26px;
+            padding-top: 10px;
+            >a
+            {
+                color: #a3a7aa;
+                font-weight: 400;
+            }
+        }
+    }
+/****************************************************
+                        505 Error
+*****************************************************/
+    .error-message-two
+    {
+        color: @primary-color;
+        font-family: @main-font;
+        font-size: 42px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        line-height: 52px;
+        text-align: center;
+        padding-top: 50px;
+    }
+    .error-bottom-two
+    {
+        color: #a3a7aa;
+        font-family: @main-font;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        line-height: 32px;
+        text-align: center;
+        padding-top: 20px;
+        a
+        {
+            color: @primary-color;
+            text-decoration: none;
+            &:hover
+            {
+                color: lighten(@primary-color,10%);
+                -webkit-transition: all 0.2s ease-in-out;
+                -moz-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}

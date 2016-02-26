@@ -1,0 +1,869 @@
+@import 'variables.less';
+
+
+/****************************************************
+				Form Heading
+****************************************************/
+.form-heading
+{
+    color: @heading-color;
+    font-family: @main-font;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.25px;
+    line-height: 26px;
+    text-transform: capitalize;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/****************************************************
+				Form Elements
+****************************************************/
+.control-label
+{
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    color: @heading-color;
+    font-size: 13px;
+    text-transform: capitalize;
+    &.align-rt
+    {
+        float: right;
+    }
+}
+.form-group
+{
+	margin-bottom: 20px;
+	&.has-error
+	{
+		.form-control
+		{
+			border-color: lighten(#cc3f44, 20%);
+			&:focus
+			{
+				box-shadow: none;
+				border-color: #cc3f44;
+			}
+		}
+	}
+	&.has-success
+	{
+		.form-control
+		{
+			border-color: lighten(#68b828, 20%);
+			&:focus
+			{
+				box-shadow: none;
+				border-color: #68b828;
+			}
+		}
+	}
+}
+
+.form-control
+{
+    border-radius: 0px;
+    box-shadow: none;
+    border-color: @dark-border;
+    height: 40px;
+    font-weight: 300;
+    line-height: 40px;
+    color: @light-color;
+    &.text-area
+    {
+        height: 100px;
+        line-height: 26px;
+        resize: none;
+    }
+    &:focus
+    {
+        border-color: darken(@dark-border, 10%);
+        box-shadow: none;
+    }
+    &::-webkit-input-placeholder {
+        color: @light-color;
+        letter-spacing: 0.25px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        color: @light-color;
+        letter-spacing: 0.25px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        color: @light-color;
+        letter-spacing: 0.25px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    &:-ms-input-placeholder {  
+        color: @light-color;
+        letter-spacing: 0.25px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 40px;
+    }
+}
+.input-group
+{
+    .input-group-addon
+    {
+        border-radius: 0px;
+        border-width: 0px;
+        text-align: center;
+        color: @heading-color;
+        background-color: @input-bg;
+        &.bg 
+        {
+            background: @primary-color;
+            padding: 6px 12px;
+            color: #ffffff;
+            font-family: @main-font;
+            font-size: 12px;
+            font-weight: 300;
+            i 
+            {
+                color: #ffffff;
+                font-size: 18px;
+            }
+        }
+    }
+    &:hover
+    {
+        text-decoration: none;
+    }
+    &.demo-group
+    {
+        .input-group-addon
+        {
+            border: 1px solid @dark-border;
+            &.addon-left
+            {
+                border-right: 0px;
+            }
+            &.addon-right
+            {
+                border-left: 0px;
+            }
+        }
+    }
+    &.input-group-lg
+    {
+        .form-control
+        {
+            border-radius: 0px;
+            &::-webkit-input-placeholder {
+               line-height: 24px;
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+               line-height: 24px;
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+               line-height: 24px;
+            }
+
+            &:-ms-input-placeholder {  
+               line-height: 24px;
+            }
+        }
+    }
+    &.input-group-sm
+    {
+        .form-control
+        {
+            border-radius: 0px;
+            &::-webkit-input-placeholder {
+                line-height: 18px;
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+                line-height: 18px;
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+                line-height: 18px;
+            }
+
+            &:-ms-input-placeholder {  
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control
+{
+	background: #f9fafb;
+}
+
+.bootstrap-filestyle
+{
+	.form-control
+	{
+		background: #ffffff;
+		border-color: @dark-border;
+	}
+}
+.has-error
+{
+    .form-control
+    {
+        border-color: @flatRed !important;
+        box-shadow: none !important;
+    }
+    .help-block
+    {
+        color: @flatRed;
+    }
+}
+.has-success
+{
+    .form-control
+    {
+        border-color: @flatGreen !important;
+        box-shadow: none !important;
+    }
+}
+
+/**************************************************
+                    Checbox & Radio
+**************************************************/
+.check-radio
+{
+    margin-bottom: 0px;
+    .checkboxes-radio
+    {
+        li
+        {
+            padding-right: 20px;
+        }
+    }
+}
+input[type="checkbox"] + label,input[type="radio"] + label
+{
+	font-weight: 300 !important;
+	color: @light-color;
+	font-size: 12px;
+	letter-spacing: 0.25px;
+    line-height: 19px;
+    margin: 0px;
+}
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../images/cbr.png) left top no-repeat;
+    cursor:pointer;
+    margin: 0px;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../images/cbr.png) -19px top no-repeat;
+}
+
+
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(../images/cbr.png) -38px top no-repeat;
+    cursor:pointer;
+    margin: 0px;
+}
+input[type="radio"]:checked + label span {
+    background:url(../images/cbr.png) -57px top no-repeat;
+}
+
+
+/**************************************************
+                    File upload button
+**************************************************/
+.btn-file-upload
+{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	padding: 0px 15px;
+	background: @primary-color;
+	border-width: 0px;
+	border-radius: 0px;
+	color: #ffffff;
+    font-weight: 400;
+	&:hover
+	{
+		color: #ffffff;
+	}
+}
+
+
+/**************************************************
+                        Select2
+**************************************************/
+/******** select2 input **********/
+.select2-container .select2-selection--single, .select2-selection--multiple
+{
+	outline: none !important;
+	border-radius: 0px !important;
+	height: 32px !important;
+	line-height: 32px !important;
+	 border-color: @dark-border !important; 
+}
+.select2-dropdown
+{
+	border-radius: 0px !important;
+	border-color: @dark-border !important;
+	color: @light-color !important;
+}
+
+/********** select2 input field **********/
+.select2-search--dropdown .select2-search__field 
+{
+	padding: 4px;
+	width: 100%;
+	outline: none !important;
+	box-shadow: none !important;
+	 border-color: @dark-border !important;
+	color: @light-color !important;
+	margin: 5px 0px;
+}
+
+
+/************ on hover background color ************/
+.select2-container--default .select2-results__option--highlighted[aria-selected] 
+{
+	background-color: #f9fafb !important; 
+	color: @light-color; 
+}
+.select2-container--default .select2-selection--single
+{
+    height: 40px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered 
+{
+	color: @light-color !important;
+	line-height: 40px; 
+}
+
+/********** selected highlight color **********/
+.select2-container--default .select2-results__option[aria-selected=true] 
+{
+	background-color: #f9f9f9 !important; 
+	color: @light-color !important;
+}
+/********for input tags *********/
+.select2-selection__choice
+{
+	margin-top: 0px !important;
+	background-color: #f4f6fb !important;
+	height: 20px !important;
+	line-height: 20px !important; 
+	margin-top: 5px !important;
+	border-radius: 0px !important;
+	border-color: @dark-border !important;
+	color: #747b8f !important;
+}
+.select2-container--classic .select2-selection--multiple .select2-selection__choice
+{
+	background-color: #ffffff !important;
+}
+.select2-container .select2-search--inline .select2-search__field
+{
+	margin-top: 0px !important;	
+}
+
+.select2-selection__arrow
+{
+	background: #f9fafb !important;
+	height: 38px !important;
+	width: 38px !important;
+	border-left: 1px solid #e4e4e4;
+}
+.select2-selection__placeholder
+{
+	font-size: 12px !important;
+	color: #bbbbbb !important;
+}
+.select2-container
+{
+	width: 100% !important;
+}
+.select2-search--dropdown
+{
+	width: 100% !important;
+}
+
+
+/**************************************************
+                        Toggle
+**************************************************/
+.toggle-switch
+{
+    padding-bottom: 32px;
+    position: relative;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.toggle{
+    position: absolute;
+    top: 20;
+    margin: auto;
+    width: 51px;
+    height: 31px;
+}
+
+.toggle label,
+.toggle i{
+    box-sizing: border-box;
+    display: block;
+    background: #ffffff;
+}
+
+.toggle label{
+    width: 51px;
+    height: 32px;
+    border-radius: 32px; 
+    border: 2px solid #e5e5e5;
+    transition: all 0.30s ease;
+}
+
+.toggle i{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    box-shadow: 0 0 1px 0 rgba(0,0,0, 0.25),
+        0 3px 3px 0 rgba(0,0,0, 0.15);
+    background: #ffffff;
+    transition: all 0.3s cubic-bezier(0.275, -0.450, 0.725, 1.450);
+}
+
+input[type="checkbox"]:active + .toggle i{
+    width: 35px;
+}
+
+input[type="checkbox"]:active + .toggle label,
+input[type="checkbox"]:checked + .toggle label{
+    border: 16px solid @flatGreen;
+}
+
+input[type="checkbox"]:checked + .toggle i{
+    left: 21px;
+}
+
+input[type="checkbox"]:checked:active + .toggle label{
+    border: 16px solid #e5e5e5;
+}
+
+input[type="checkbox"]:checked:active + .toggle i{
+    left: 14px;
+}
+
+input[type="checkbox"]:disabled + .toggle label{
+    border: 16px solid lighten(@flatGreen, 20%);
+}
+
+
+/**************************************************
+                        Multi Select
+**************************************************/
+.ms-container
+{
+    .ms-selectable, .ms-selection
+    {
+        .ms-list
+        {
+            box-shadow: none;
+            border: 1px solid @dark-border;
+            border-radius: 0px;
+            .ms-elem-selectable, .ms-elem-selection
+            {
+                border-bottom: 1px solid @light-border !important;
+                color: @content-color;
+                font-family: @main-font;
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 0.25px;
+                padding: 5px 10px;
+                &.ms-hover
+                {
+                    background-color: @primary-color;
+                    color: #ffffff;
+                }
+            }
+            &.ms-focus
+            {
+                box-shadow: none !important;
+                border: 1px solid @dark-border !important;
+            }
+        }
+    }
+}
+
+
+/**************************************************
+                        Date Picker
+**************************************************/
+.picker
+{
+    padding-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+}
+.datepicker
+{
+    border-radius: 0px !important;
+    .datepicker-inline
+    {
+        border: 1px solid @dark-border !important;
+        color: @content-color;
+        font-family: @main-font;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .datepicker-days, .datepicker-months, .datepicker-years
+    {
+        table
+        {
+            thead
+            {
+                tr
+                {
+                    .datepicker-switch, .prev, .next
+                    {
+                        color: @heading-color;
+                        font-family: @main-font;
+                        font-size: 13px;
+                        font-weight: 400;
+                        &:hover
+                        {
+                            background-color: @input-bg;
+                            border-radius: 0px;
+                        }
+                    }
+                    .dow
+                    {
+                        color: @heading-color;
+                        font-family: @main-font;
+                        font-size: 13px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            tbody
+            {
+                tr
+                {
+                    .old, .new
+                    {
+                        color: @light-color;
+                        font-family: @main-font;
+                        font-size: 12px;
+                        font-weight: 300;
+                        &:hover
+                        {
+                            background-color: @input-bg;
+                            border-radius: 0px;
+                        }
+                    }
+                    .day
+                    {
+                        &.active
+                        {
+                            background-color: @primary-color;
+                            border-radius: 0px;                            
+                            &:hover
+                            {
+                                background-color: @primary-color;                                
+                            }
+                        }
+                        &:hover
+                        {
+                            background-color: @input-bg;
+                            border-radius: 0px;
+                        }
+                    }
+                    .selected
+                    {
+                        background-color: @primary-color;
+                        border-radius: 0px;                        
+                        &:hover
+                        {
+                            background-color: @primary-color !important;
+                            /*border: 1px solid transparent !important;*/
+                        }
+                    }
+                    .range
+                    {
+                        background-color: lighten(@primary-color,30%);
+                    }
+                    .month, .year
+                    {
+                        &.active
+                        {
+                            background-color: @primary-color;
+                            border-radius: 0px;                            
+                            &:hover
+                            {
+                                background-color: @primary-color;                                
+                            }
+                        }
+                        &:hover
+                        {
+                            background-color: @primary-color;
+                            border-radius: 0px;
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.input-daterange input:first-child, .input-daterange input:last-child
+{
+    border-radius: 0px !important;
+}
+
+
+/**************************************************
+                        Color Picker
+**************************************************/
+.color-picker-addon
+{
+    background-color: #ffffff;
+}
+.color-dropdown
+{
+    height: 40px;
+    &:hover, &:active, &:focus
+    {
+        background-color: #ffffff !important;
+        border: 1px solid @dark-border !important;
+    }
+}
+.pick-a-color-markup
+{
+    .color-preview
+    {
+        border: 1px solid @dark-border !important;
+        border-radius: 0px !important;
+        box-shadow: none !important;
+    }
+    >.input-group-btn
+    {
+        &.open
+        {
+            >.dropdown-toggle.btn-default
+            {
+                border: 1px solid @dark-border;
+                border-radius: 0px;
+                box-shadow: none;
+                background-color: #ffffff;
+            }
+           
+        }
+    }
+    .color-menu
+    {
+        border: 1px solid @dark-border;
+        border-radius: 0px;
+        .color-menu-tabs
+        {
+            color: @heading-color;
+            font-family: @main-font;
+            font-size: 14px;
+            font-weight: 400;
+            border-bottom: 1px solid @dark-border;
+            .tab
+            {
+                border: 0px;
+                border-radius: 0px;
+                &:hover
+                {
+                    border: 0px;
+                    border-radius: 0px;
+                    background-color: @input-bg;
+                }
+            }
+            .tab-active
+            {
+                border: 0px;
+                border-radius: 0px;
+                background-color: @input-bg;
+            }
+        }
+        .color-label
+        {
+            color: @content-color;
+            font-family: @main-font;
+            font-size: 14px;
+            font-weight: 300;
+            &:hover
+            {
+                color: @heading-color;
+            }
+        }
+        .color-box
+        {
+            border: 1px solid @dark-border;
+            border-radius: 0px;
+            box-shadow: none;
+            .highlight-band
+            {
+                border: 1px solid #ffffff;
+                border-radius: 0px;
+                box-shadow: none;
+                background-color: @primary-color;
+                .highlight-band-stripe
+                {
+                    display: none;
+                }
+            }
+        }
+        .advanced-content
+        {
+            .color-box
+            {
+                top: 32px;
+            }
+        }
+    }
+}
+/**************************************************
+                        Form Input Masks
+**************************************************/
+.date-block
+{
+    display: block;
+    width: 100%;
+}
+.help-block
+{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: @light-color;
+}
+
+/**************************************************
+                        Upload
+**************************************************/
+#upload {
+    font-family: 'PT Sans Narrow', sans-serif;
+    padding: 30px;
+}
+#drop {
+    padding: 100px 50px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+    color: @primary;
+    border:4px dotted @primary;
+}
+#drop a {
+    background-color: @primary;
+    padding: 12px 26px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 12px;
+    line-height: 1;
+}
+#drop a:hover {
+    background-color: lighten(@primary,10%);
+    text-decoration: none;
+}
+#drop input {
+    display: none;
+}
+#upload ul {
+    list-style: none;
+}
+#upload ul li {
+    background-color: #333639;
+    background-image: -webkit-linear-gradient(top, #333639, #303335);
+    background-image: -moz-linear-gradient(top, #333639, #303335);
+    background-image: linear-gradient(top, #333639, #303335);
+    border-top: 1px solid #3d4043;
+    border-bottom: 1px solid #2b2e31;
+    height: 75px;
+    left: -20px;
+    position: relative;
+}
+#upload ul li input {
+    display: none;
+}
+#upload ul li p {
+    width: 144px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #EEE;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+#upload ul li i {
+    font-weight: normal;
+    font-style: normal;
+    color: #7f7f7f;
+    display: block;
+}
+#upload ul li canvas {
+    top: 15px;
+    left: 32px;
+    position: absolute;
+}
+#upload ul li span {
+    width: 15px;
+    height: 12px;
+    background: url('../images/icons.png') no-repeat;
+    position: absolute;
+    top: 34px;
+    right: 33px;
+    cursor: pointer;
+}
+#upload ul li.working span {
+    height: 16px;
+    background-position: 0 -12px;
+}
+#upload ul li.error p {
+    color: red;
+}
+
+.progress-bar-primary
+{
+    background-color: @primary-color;
+    border-radius: none;
+}

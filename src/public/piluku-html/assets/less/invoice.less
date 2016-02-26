@@ -1,0 +1,164 @@
+@import 'variables.less';
+
+
+/****************************************************
+                        Company Title
+****************************************************/
+.invoice
+{
+    color: @light-border;
+    font-family: @main-font;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.25px;
+    line-height: 26px;
+    text-transform: uppercase;
+    float: right;
+    padding-right: 35px;
+}
+.company-title
+{
+    color: @heading-color;
+    font-family: @main-font;
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 0.25px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 52px;
+    padding-bottom: 26px;
+    .company-addess
+    {
+        color: @content-color;
+        font-weight: 300;
+        font-size: 14px;
+        padding-top: 20px;
+    }
+}
+/****************************************************
+                        Client Address
+****************************************************/
+.client-address
+{
+    color: @content-color;
+    font-family: @main-font;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    line-height: 26px;
+    text-transform: capitalize;
+    padding-bottom: 30px;
+    .client-heading
+    {
+        color: @heading-color;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    &.bottom-pad
+    {
+        padding-bottom: 0px;
+    }
+}
+/****************************************************
+                Invoice & Payment Details
+****************************************************/
+.invoice-details
+{
+    color: @content-color;
+    font-family: @main-font;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    line-height: 26px;
+    text-transform: capitalize;
+    span
+    {
+        color: @heading-color;
+        font-weight: 400;
+    }
+}
+/****************************************************
+                        Invoice Table
+****************************************************/
+.invoice-table
+{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    thead
+    {
+        tr
+        {
+            th
+            {
+                color: @content-color;
+                font-family: @main-font;
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: 0.25px;
+                line-height: 26px;
+                text-transform: capitalize;
+                border-bottom: 1px solid @light-border;
+            }
+        }
+    }
+    tbody
+    {
+        tr
+        {
+            td
+            {
+                color: @heading-color;
+                font-family: @main-font;
+                font-weight: 300;
+                font-size: 14px;
+                letter-spacing: 0.25px;
+                line-height: 26px;
+                text-transform: capitalize;
+                border-bottom: 1px solid @light-border;
+            }
+        }
+    }
+}
+/****************************************************
+                        Total Payment
+****************************************************/
+.total-payment
+{
+    color: @heading-color;
+    font-family: @main-font;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    line-height: 26px;
+    text-transform: capitalize;
+    text-align: right;
+    &.total-primary
+    {
+        color: @primary-color;
+        font-weight: 400;
+    }
+}
+.payment-value
+{
+    color: @content-color;
+    font-family: @main-font;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    line-height: 26px;
+    text-transform: capitalize;
+    text-align: left;
+    &.total-primary
+    {
+        color: @primary-color;
+        font-weight: 400;
+    }
+}
+/****************************************************
+                        Buttons
+****************************************************/
+.invoice-btn
+{
+    font-size: 16px;
+}

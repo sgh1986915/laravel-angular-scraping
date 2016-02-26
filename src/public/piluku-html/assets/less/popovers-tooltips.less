@@ -1,0 +1,126 @@
+@import 'variables.less';
+
+/****************************************************
+                        Popovers
+****************************************************/
+
+.popover
+{
+    border: 1px solid @light-border;
+    border-radius: 0px;
+    .popover-title
+    {
+        color: #ffffff;
+        font-family: @main-font;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.25px;
+        line-height: 24px;
+        background-color: @input-bg;
+        border-radius: 0px;
+        border-bottom: @dark-border;
+        background-color: @primary-color;
+    }
+    .popover-content
+    {
+        color: @content-color;
+        font-family: @main-font;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.25px;
+        line-height: 24px;
+    }
+    &.top
+    {
+        >.arrow 
+        {
+            border-top-color: @dark-border !important;
+        }
+    }
+    &.right
+    {
+        >.arrow 
+        {
+            border-right-color: @dark-border !important;
+        }
+    }
+    &.bottom
+    {
+        >.arrow 
+        {
+            border-bottom-color: @dark-border !important;
+        }
+    }
+    &.left
+    {
+        >.arrow 
+        {
+            border-left-color: @dark-border !important;
+        }
+    }
+}
+
+
+/****************************************************
+                        Tooltips
+****************************************************/
+.tooltip
+{
+    .tooltip-inner
+    {
+        color: #ffffff;
+        font-family: @main-font;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.25px;
+        line-height: 24px;
+    }
+}
+
+.primary-tooltip + .tooltip
+{
+    >.tooltip-inner
+    {
+        background-color: @primary-color;
+    }
+    >.tooltip-arrow
+    {
+        border-left-color: @primary-color;
+    }
+}
+
+.red-tooltip + .tooltip
+{
+    >.tooltip-inner
+    {
+        background-color: @flatRed;
+    }
+    >.tooltip-arrow
+    {
+        border-top-color: @flatRed;
+    }
+}
+
+.orange-tooltip + .tooltip
+{
+    >.tooltip-inner
+    {
+        background-color: @flatOrange;
+    }
+    >.tooltip-arrow
+    {
+        border-bottom-color: @flatOrange;
+    }
+}
+
+.green-tooltip + .tooltip
+{
+    >.tooltip-inner
+    {
+        background-color: @flatGreen;
+    }
+    >.tooltip-arrow
+    {
+        border-right-color: @flatGreen;
+    }
+}

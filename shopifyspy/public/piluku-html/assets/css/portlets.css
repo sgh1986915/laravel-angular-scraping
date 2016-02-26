@@ -1,0 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito:400,300);
+/************theme fonts********************/
+/***********************theme colors*****************************/
+/*****************theme parametres*******************/
+/*sidebar-parametres*/
+#piluku_porlet .panel-heading {
+  min-height: 50px;
+}
+#piluku_porlet .panel-title {
+  display: inline-block;
+  float: left;
+}
+#piluku_porlet .panel-controls {
+  float: right;
+}
+#piluku_porlet .panel-controls ul li {
+  list-style: none;
+  display: inline-block;
+}

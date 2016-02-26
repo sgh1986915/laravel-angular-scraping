@@ -1,0 +1,90 @@
+<?php /* Web site Title */ ?>
+<?php $__env->startSection('title'); ?>
+<?php echo trans('pages.login'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php /* Content */ ?>
+<?php $__env->startSection('content'); ?>
+
+    <div class="flip-container">
+        <div class="flipper">
+            <div class="front">
+                <!-- front content -->
+                <div class="holder">
+                <?php echo Form::open(['action' => 'SessionController@store', 'class' => 'form-horiz']); ?> 
+
+                    <h1 class="heading"><?php echo trans('pages.login'); ?></h1>    
+
+                    <?php echo Form::text('email', null, array('class' => 'form-control', 'placeholder' => trans('users.email'), 'autofocus')); ?>
+
+                    <?php echo ($errors->has('email') ? $errors->first('email') : ''); ?>
+
+                    
+                    <?php echo Form::password('password', array('class' => 'form-control', 'placeholder' => trans('users.pword'))); ?>
+
+                    <?php echo ($errors->has('password') ?  $errors->first('password') : ''); ?>
+
+
+                    <div class="bottom_info">                        
+                        <!-- <a class="pull-right" href="<?php echo route('forgotPasswordForm'); ?>"><?php echo trans('users.forgot'); ?>?</a> -->
+                        <a href="#" class="pull-right" data-toggle="modal" data-target="#forgot">forgot password?</a>
+                        
+                        <!-- <div class="form-group check-radio">
+                            <input type="checkbox" aid="c1a" class="form-control" name="rememberMe"/>
+                            <label for="c1a"><span></span><?php echo trans('users.remember'); ?>?</label>
+                        </div> -->
+                        <!-- <?php echo Form::checkbox('rememberMe', 'rememberMe', ['class' => 'checkbox']); ?> <?php echo trans('users.remember'); ?>? -->
+                        <!-- <div class="checkbox pull-left">
+                            <label>
+                                <?php echo Form::checkbox('rememberMe', 'rememberMe', ['class' => 'checkbox']); ?> <?php echo trans('users.remember'); ?>?
+                            </label>
+                        </div> -->
+                    </div>      
+
+                    <div class="clearfix"></div>    
+
+                    <button type="submit" class="btn btn-primary btn-block"><?php echo trans('pages.login'); ?></button> 
+
+                <?php echo Form::close(); ?>                   
+                </div>
+            </div>          
+        </div>      
+    </div>
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <?php echo Form::open(array('action' => 'UserController@forgot', 'method' => 'post')); ?>
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><i class="ion-android-settings"></i> Reset password</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-12">
+                        <!-- <input type="text" class="form-control" placeholder="Enter Email here"> -->
+                        <?php echo Form::text('email', null, array('class' => 'form-control', 'placeholder' => trans('users.email'), 'autofocus')); ?>
+
+                        <?php echo ($errors->has('email') ? $errors->first('email') : ''); ?>
+
+                        <h6 class="note"><i class="ion-android-mail"></i> password will be sent to your email</h6>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-red" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary"><?php echo trans('users.resendpword'); ?></button>
+                    
+                </div>
+            <?php echo Form::close(); ?>
+
+            </div>
+        </div>
+    </div>
+
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.logged_out', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

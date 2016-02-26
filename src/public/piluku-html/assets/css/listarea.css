@@ -1,0 +1,43 @@
+.addListItem {
+	display:inline-block;
+	vertical-align:top;
+	margin-left: 15px;
+}
+
+div.addListItem > input, div.addListItem > .addButton, div.listItemWrap > div{
+	display:inline-block;
+	margin:0;
+	vertical-align:top;
+}
+
+div.addListItem > input{
+	border:1px solid #ccc;
+	padding: 3px;
+}
+
+div.addListItem > .addButton{
+	width:20px; height:23px;
+	cursor: pointer;
+	background: url(../images/plus.png) no-repeat center;
+	float: right;
+}
+
+div.listItemWrap > .deleteButton{
+	width:20px; height:20px;
+	cursor: pointer;
+	background: url(../images/minus.png) no-repeat center;
+	float: right;
+}
+
+div.listItemWrap{
+	margin-bottom:3px;
+}
+input
+{
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+}
+button
+{
+	margin-left: 10px;
+}
